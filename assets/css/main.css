@@ -47,19 +47,20 @@ body {
 }
 
 .shopify__title {
+  font-family: 'Inter';
   font-size: 18px;
   font-weight: 600;
-  line-height: 3.1em;
+  line-height: 0.3;
   margin: 40px 209px 61px;
   color: var(--color-text-header);
 }
 
 .shopify__subtitle {
-  font-family: 'Cardo', serif;
+  font-family: 'Cardo';
   font-size: 52px;
   max-width: 595px;
   margin: 0 auto 88px;
-  line-height: 1em;
+  line-height: 1;
   color: var(--color-text-header);
 }
 
@@ -80,9 +81,10 @@ body {
 }
 
 .resource-table__heading {
+  font-family: 'Inter';
   font-size: 12px;
   font-weight: bold;
-  line-height: 1.5em;
+  line-height: 1;
   text-align: left;
   padding: 26px 24px;
   color: var(--color-text-header);
@@ -97,6 +99,7 @@ body {
 }
 
 .resource-table__cell {
+  font-family: 'Inter';
   font-size: 14px;
   padding: 26px 24px;
   border-bottom: 1px solid var(--color-table-rows-border);
@@ -175,7 +178,7 @@ body {
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
-  line-height: 1.4em;
+  line-height: 1;
   color: var(--color-free-status-text);
   transition: 0.3s ease-in-out,
     color 0.3s ease-in-out;
@@ -204,7 +207,7 @@ body {
 .resource-table__page-number {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.4em;
+  line-height: 1;
   padding: 10px 16px;
   border-radius: 8px;
   cursor: pointer;
@@ -237,7 +240,7 @@ body {
   font-family: 'Cardo';
   font-size: 52px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.2;
   letter-spacing: -2px;
   margin-bottom: 24px;
 }
@@ -505,31 +508,28 @@ textarea:focus {
 
   .resource-table__pagination-button svg {
     width: 20px;
-    /* Increase size for better tap targets */
   }
 
-  /* Hide "Previous" and "Next" text on extra-small screens */
   .resource-table__pagination-button span {
     display: none;
   }
 
-    .form-section h1 {
-      font-size: 1.2em;
-    }
-  
-    .resource-form input,
-    .resource-form textarea {
-      font-size: 0.9em;
-    }
+  .form-section h1 {
+    font-size: 1.2em;
+  }
 
-        .footer {
-          font-size: 0.8rem;
-          padding: 15px 10px;
-        }
-    
-        .footer-icons img {
-          width: 20px;
-          height: 20px;
-        }
-  
+  .resource-form input,
+  .resource-form textarea {
+    font-size: 0.9em;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 15px 10px;
+  }
+
+  .footer-icons img {
+    width: 20px;
+    height: 20px;
+  }
 }
