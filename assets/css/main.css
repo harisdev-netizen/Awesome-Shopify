@@ -17,6 +17,8 @@
   --color-pagination-current-bg: #E4E7EC;
   --color-pagination-current-bg-hover: #f2f2f9;
   --color-pagination-current-text: #7F56D9;
+  --color-form-header-description-blue: #4a00e0;
+  --color-form-important-label: #FF0004;
 }
 
 * {
@@ -203,31 +205,62 @@ body {
   font-family: 'Cardo';
   font-size: 52px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.5;
   letter-spacing: -2px;
   margin-bottom: 24px;
 }
 
 .form-section p {
-  font-size: 1em;
-  margin-bottom: 20px;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 48px;
+  color: var(--color-table-text);
 }
 
 .form-section a {
-  color: #4a00e0;
+  font-weight: 500;
+  color: var(--color-form-header-description-blue);
   text-decoration: none;
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+.form-section a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-form-header-description-blue);
+  transition: width 0.5s ease;
+}
+
+.form-section a:hover::after {
+  width: 100%;
 }
 
 .resource-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 6px;
 }
 
 .resource-form label {
+  font-family: 'Inter';
+  font-size: 14px;
+  line-height: 1.4;
   text-align: left;
-  font-size: 0.9em;
-  margin-bottom: 5px;
+
+  span {
+    color: var(--color-form-important-label);
+  }
+}
+
+.resource-form input {
+  margin-bottom: 24px;
 }
 
 .resource-form input,
@@ -359,9 +392,9 @@ body {
     font-size: 1.5em;
   }
 
-  .resource-form {
+  /* .resource-form {
     gap: 10px;
-  }
+  } */
 
   .footer {
     flex-direction: column;
