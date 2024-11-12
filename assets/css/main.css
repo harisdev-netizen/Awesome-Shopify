@@ -20,6 +20,9 @@
   --color-form-header-description-blue: #4a00e0;
   --color-form-important-label: #FF0004;
   --color-form-input-border: #D0D5DD;
+  --color-form-button: #7F56D9;
+  --color-footer-border-color: #E4E7EC;
+  --color-footer-text: #667085;
 }
 
 * {
@@ -103,7 +106,9 @@ body {
   color: var(--color-resource-names);
 }
 
-/* Status Styling */
+/*-----------------
+   Status Styling
+------------------*/
 .resource-table__status {
   font-weight: 500;
   padding: 2px 8px;
@@ -121,7 +126,9 @@ body {
   background: var(--color-free-status-text-background);
 }
 
-/* Pagination Styling */
+/*-----------------------
+   Pagination Styling
+------------------------*/
 .resource-table__pagination {
   max-width: 1280px;
   width: 100%;
@@ -246,7 +253,6 @@ body {
 .resource-form {
   display: flex;
   flex-direction: column;
-  gap: 6px;
 }
 
 .resource-form label {
@@ -264,6 +270,10 @@ body {
   margin-bottom: 24px;
 }
 
+.resource-form textarea {
+  margin-bottom: 24px;
+}
+
 .resource-form input,
 .resource-form textarea {
   font-family: 'Inter';
@@ -273,7 +283,8 @@ body {
   border-radius: 8px;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   &::-webkit-input-placeholder {
     color: transparent;
     -webkit-transition: color 0.2s ease;
@@ -304,18 +315,35 @@ input:focus {
   height: 100px;
 }
 
-.checkbox-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.resource-form__label {
+  margin-bottom: 16px;
 }
 
-.checkbox-group label {
-  font-size: 0.9em;
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.checkbox__group-label {
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.checkbox-group input {
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  margin: 0;
 }
 
 .resource-form button {
-  background-color: #6c63ff;
+  background-color: var(--color-form-button);
   color: #fff;
   padding: 10px;
   font-size: 1em;
@@ -336,28 +364,28 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  margin-top: 40px;
-  border-top: 1px solid #e0e0e0;
-  color: #888;
-  font-size: 0.9em;
+  padding: 33px 32px 0 32px;
+  margin-bottom: 40px;
+  border-top: 1px solid var(--color-footer-border-color);
 }
 
 .footer p {
-  font-size: 0.9em;
-  margin: 0;
-  color: #666;
-  margin-bottom: 10px;
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 1.5;
+  /* margin: 0; */
+  color: var(--color-footer-text);
+  /* margin-bottom: 10px; */
 }
 
 .footer-icons {
   display: flex;
-  gap: 15px;
+  gap: 24px;
 }
 
 .footer-icons img {
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 22px;
   transition: transform 0.2s ease;
   filter: grayscale(100%);
 }
@@ -407,22 +435,18 @@ input:focus {
     font-size: 12px;
   }
 
-  /* Hide "Previous" and "Next" text, keep only SVG icons */
   .resource-table__pagination-button span {
     display: none;
   }
 
   .form-section {
     padding: 20px;
+    margin: 0 auto 58px auto;
   }
 
   .form-section h1 {
     font-size: 1.5em;
   }
-
-  /* .resource-form {
-    gap: 10px;
-  } */
 
   .footer {
     flex-direction: column;
