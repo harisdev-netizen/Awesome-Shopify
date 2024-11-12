@@ -35,7 +35,7 @@
 
 body {
   background: var(--color-main);
-  /* font-family: 'Inter', sans-serif; */
+  overflow-x: hidden;
 }
 
 /*-----------------
@@ -108,7 +108,7 @@ body {
   color: var(--color-table-text);
 }
 
-.resource-table__cell a {
+/* .resource-table__cell a {
   font-weight: 600;
   text-decoration: none;
   color: var(--color-resource-table-preview);
@@ -133,6 +133,10 @@ body {
 
 .resource-table__cell-name {
   color: var(--color-resource-names);
+} */
+
+.resource-table__cell svg {
+  width: 20px;
 }
 
 /*-----------------
@@ -425,6 +429,9 @@ textarea:focus {
   filter: grayscale(0%);
 }
 
+/*-----------------
+  MEDIA QUERIES
+-------------------*/
 @media (max-width: 768px) {
   .shopify__title {
     font-size: 14px;
@@ -436,25 +443,34 @@ textarea:focus {
     margin-bottom: 40px;
   }
 
-  .resources-containerresource-table {
-    overflow-x: auto;
-    border-radius: 8px;
+  .resources-container {
+    overflow: visible;
     margin-bottom: 86px;
   }
 
-  .resource-table,
-  .resource-table__pagination {
-    max-width: 100%;
-    padding: 0;
+  .resources-container__table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    table-layout: fixed;
   }
 
   .resource-table__heading,
   .resource-table__row td {
     font-size: 12px;
     padding: 10px 8px;
+    word-wrap: break-word;
+    text-align: left;
   }
 
   .resource-table__pagination {
+    max-width: 100%;
     padding: 10px;
     gap: 8px;
     flex-direction: row;
@@ -519,11 +535,6 @@ textarea:focus {
   .resource-table__pagination-button span {
     display: none;
   }
-
-  /* .form-section h2 {
-    font-size: 26px;
-    letter-spacing: -1px;
-  } */
 
   .resource-form input,
   .resource-form textarea {
