@@ -22,6 +22,7 @@
   --color-form-important-label: #FF0004;
   --color-form-input-border: #D0D5DD;
   --color-form-button: #7F56D9;
+  --color-form-button-hover: #4a00e0;
   --color-footer-border-color: #E4E7EC;
   --color-footer-text: #667085;
 }
@@ -370,18 +371,20 @@ textarea:focus {
 }
 
 .resource-form button {
-  background-color: var(--color-form-button);
-  color: #fff;
-  padding: 10px;
-  font-size: 1em;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  background-color: var(--color-form-button);
+  color: var(--color-main);
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .resource-form button:hover {
-  background-color: #4a00e0;
+  background-color: var(--color-form-button-hover);
 }
 
 /*-------------
