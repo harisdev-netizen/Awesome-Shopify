@@ -7,6 +7,7 @@
   --color-rows: #F9FAFB;
   --color-table-rows-border: #E4E7EC;
   --color-resource-names: #101828;
+  --color-resource-table-preview: #6941C6;
   --color-table-text: #475467;
   --color-paid-status-text: #027A48;
   --color-paid-status-text-background: #ECFDF3;
@@ -100,6 +101,29 @@ body {
   padding: 26px 24px;
   border-bottom: 1px solid var(--color-table-rows-border);
   color: var(--color-table-text);
+}
+
+.resource-table__cell a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-resource-table-preview);
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+.resource-table__cell a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-resource-table-preview);
+  transition: width 0.5s ease;
+}
+
+.resource-table__cell a:hover::after {
+  width: 100%;
 }
 
 .resource-table__cell-name {
@@ -373,7 +397,6 @@ textarea:focus {
   font-family: 'Inter';
   font-size: 16px;
   line-height: 1.5;
-  /* margin: 0; */
   color: var(--color-footer-text);
   /* margin-bottom: 10px; */
 }
