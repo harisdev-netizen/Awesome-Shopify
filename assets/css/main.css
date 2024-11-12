@@ -35,7 +35,7 @@
 
 body {
   background: var(--color-main);
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
 }
 
 /*-----------------
@@ -51,7 +51,7 @@ body {
   font-family: 'Inter';
   font-size: 18px;
   font-weight: 600;
-  line-height: 0.3;
+  line-height: 3.1;
   margin: 40px 209px 61px;
   color: var(--color-text-header);
 }
@@ -85,7 +85,7 @@ body {
   font-family: 'Inter';
   font-size: 12px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.5;
   text-align: left;
   padding: 26px 24px;
   color: var(--color-text-header);
@@ -102,6 +102,7 @@ body {
 .resource-table__cell {
   font-family: 'Inter';
   font-size: 14px;
+  line-height: 1.4;
   padding: 26px 24px;
   border-bottom: 1px solid var(--color-table-rows-border);
   color: var(--color-table-text);
@@ -179,7 +180,7 @@ body {
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.4;
   color: var(--color-free-status-text);
   transition: 0.3s ease-in-out,
     color 0.3s ease-in-out;
@@ -208,7 +209,7 @@ body {
 .resource-table__page-number {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.4;
   padding: 10px 16px;
   border-radius: 8px;
   cursor: pointer;
@@ -237,7 +238,7 @@ body {
   text-align: center;
 }
 
-.form-section h1 {
+.form-section h2 {
   font-family: 'Cardo';
   font-size: 52px;
   font-weight: 400;
@@ -438,6 +439,7 @@ textarea:focus {
   .resource-table {
     overflow-x: auto;
     border-radius: 8px;
+    margin-bottom: 86px;
   }
 
   .resource-table__table,
@@ -473,8 +475,9 @@ textarea:focus {
     margin: 0 auto 58px auto;
   }
 
-  .form-section h1 {
-    font-size: 1.5em;
+  .form-section h2 {
+    font-size: 32px;
+    letter-spacing: -1px;
   }
 
   .footer {
@@ -482,8 +485,8 @@ textarea:focus {
     text-align: center;
   }
 
-  .footer-icons {
-    margin-top: 10px;
+  .footer p {
+    margin-bottom: 20px;
   }
 
   .footer-icons img {
@@ -517,9 +520,10 @@ textarea:focus {
     display: none;
   }
 
-  .form-section h1 {
-    font-size: 1.2em;
-  }
+  /* .form-section h2 {
+    font-size: 26px;
+    letter-spacing: -1px;
+  } */
 
   .resource-form input,
   .resource-form textarea {
