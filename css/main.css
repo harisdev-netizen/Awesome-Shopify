@@ -121,9 +121,6 @@ td {
   width: 20px;
 }
 
-/*-----------------
-   Status Styling
-------------------*/
 .resource-table__status {
   font-weight: 500;
   padding: 2px 8px;
@@ -324,7 +321,7 @@ textarea:focus {
 
 .form textarea {
   resize: vertical;
-  height: 100px;
+  height: 150px;
 }
 
 .form form label {
@@ -514,21 +511,27 @@ textarea:focus {
   }
 
   .pagination-button,
-  .resource-table__page-number {
+  .pagination__btns button {
     padding: 4px 8px;
     font-size: 10px;
   }
 
-  .pagination-button svg {
-    width: 20px;
+  .pagination__btns button:nth-child(5),
+  .pagination__btns button:nth-child(6),
+  .pagination__btns button:nth-child(7) {
+    display: none;
   }
 
   .pagination-button span {
     display: none;
   }
 
-  .resource-form input,
-  .resource-form textarea {
+  .pagination-button svg {
+    width: 20px;
+  }
+
+  .form input,
+  .form textarea {
     font-size: 0.9em;
   }
 
