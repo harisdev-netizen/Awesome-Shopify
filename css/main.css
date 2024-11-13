@@ -384,6 +384,10 @@ textarea:focus {
   align-items: center;
 }
 
+.footer p span {
+  font-weight: 800;
+}
+
 .footer p {
   font-family: 'Inter';
   font-size: 16px;
