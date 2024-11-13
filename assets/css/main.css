@@ -453,6 +453,10 @@ textarea:focus {
   MEDIA QUERIES
 -------------------*/
 @media (max-width: 768px) {
+  body {
+    padding: 5px;
+  }
+
   .shopify__title {
     font-size: 14px;
     margin: 20px;
@@ -486,7 +490,6 @@ textarea:focus {
   .resource-table__row td {
     font-size: 12px;
     padding: 10px 8px;
-    word-wrap: break-word;
     text-align: left;
   }
 
