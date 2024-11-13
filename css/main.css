@@ -373,8 +373,9 @@ textarea:focus {
 }
 
 .footer {
+  max-width: 1280px;
   padding: 33px 32px 0 32px;
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
   border-top: 1px solid var(--color-footer-border-color);
 }
 
