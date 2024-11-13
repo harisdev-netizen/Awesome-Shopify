@@ -79,6 +79,7 @@ body {
 .resource-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: auto;
 }
 
 .resource-table__heading {
@@ -103,9 +104,24 @@ body {
   font-family: 'Inter';
   font-size: 14px;
   line-height: 1.4;
-  padding: 26px 24px;
+  padding: 26px 18px;
   border-bottom: 1px solid var(--color-table-rows-border);
   color: var(--color-table-text);
+}
+
+td:nth-child(2) {
+  min-width: 200px;
+  white-space: nowrap;
+}
+
+td:nth-child(1) {
+  min-width: 250px;
+  white-space: nowrap;
+}
+
+td {
+  overflow: visible;
+  text-overflow: clip;
 }
 
 /* .resource-table__cell a {
@@ -472,6 +488,14 @@ textarea:focus {
     padding: 10px 8px;
     word-wrap: break-word;
     text-align: left;
+  }
+
+  td:nth-child(2) {
+    white-space: wrap;
+  }
+
+  td:nth-child(1) {
+    white-space: wrap;
   }
 
   .resource-table__pagination {
