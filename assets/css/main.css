@@ -35,19 +35,15 @@
 
 body {
   background: var(--color-main);
-  overflow-x: hidden;
 }
 
-/*-----------------
- Shopify Section
-------------------*/
-.shopify {
+.container {
   max-width: 1440px;
   margin: 0 auto;
   text-align: center;
 }
 
-.shopify__title {
+header h1 {
   font-family: 'Inter';
   font-size: 18px;
   font-weight: 600;
@@ -56,7 +52,7 @@ body {
   color: var(--color-text-header);
 }
 
-.shopify__subtitle {
+header h2 {
   font-family: 'Cardo';
   font-size: 52px;
   max-width: 645px;
@@ -65,9 +61,6 @@ body {
   color: var(--color-text-header);
 }
 
-/*-------------------------
-  Resource Table Styling
---------------------------*/
 .resources-container {
   width: 100%;
   max-width: 1280px;
@@ -148,10 +141,7 @@ td {
   background: var(--color-free-status-text-background);
 }
 
-/*-----------------------
-   Pagination Styling
-------------------------*/
-.resource-table__pagination {
+.pagination {
   max-width: 1280px;
   width: 100%;
   font-family: 'Inter';
@@ -162,7 +152,7 @@ td {
   padding: 20px 24px 24px 24px;
 }
 
-.resource-table__pagination-button {
+.pagination-button {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -180,26 +170,26 @@ td {
   box-shadow: 0px 1px 2px 0px #1018280D;
 }
 
-.resource-table__pagination-button:hover {
+.pagination-button:hover {
   background-color: var(--color-resource-names);
   color: var(--color-main);
 }
 
-.resource-table__pagination-button svg {
+.pagination-button svg {
   width: 12px;
 }
 
-.resource-table__pagination-button:hover svg path {
+.pagination-button:hover svg path {
   stroke: var(--color-main);
 }
 
-.resource-table__page-numbers {
+.pagination__btns {
   display: flex;
   gap: 8px;
   text-align: center;
 }
 
-.resource-table__page-number {
+.pagination__btns button {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
@@ -208,22 +198,21 @@ td {
   cursor: pointer;
   color: var(--color-pagination-current-bg-text);
   transition: background-color 0.2s;
+  border: none;
+  font-family: inherit;
 }
 
-.resource-table__page-number:hover {
+.pagination__btns button:hover {
   background-color: #f2f2f9;
 }
 
-.resource-table__page-number--current {
+.pagination__btns button.current {
   background-color: var(--color-pagination-current-bg);
   color: var(--color-pagination-current-text);
   font-weight: bold;
 }
 
-/*--------------
-  Form Section
-----------------*/
-.form-section {
+.form {
   max-width: 781px;
   width: 100%;
   margin: 0 auto 150px auto;
@@ -231,7 +220,7 @@ td {
   text-align: center;
 }
 
-.form-section h2 {
+.form h2 {
   font-family: 'Cardo';
   font-size: 52px;
   font-weight: 400;
@@ -240,7 +229,7 @@ td {
   margin-bottom: 24px;
 }
 
-.form-section p {
+.form p {
   font-family: 'Inter';
   font-size: 20px;
   font-weight: 400;
@@ -249,7 +238,7 @@ td {
   color: var(--color-table-text);
 }
 
-.form-section a {
+.form a {
   font-weight: 500;
   color: var(--color-form-header-description-blue);
   text-decoration: none;
@@ -257,7 +246,7 @@ td {
   transition: color 0.5s ease;
 }
 
-.form-section a::after {
+.form a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -268,16 +257,16 @@ td {
   transition: width 0.5s ease;
 }
 
-.form-section a:hover::after {
+.form a:hover::after {
   width: 100%;
 }
 
-.resource-form {
+.form form {
   display: flex;
   flex-direction: column;
 }
 
-.resource-form label {
+.form label {
   font-family: 'Inter';
   font-size: 14px;
   line-height: 1.4;
@@ -288,16 +277,16 @@ td {
   }
 }
 
-.resource-form input {
+.form input {
   margin-bottom: 24px;
 }
 
-.resource-form textarea {
+.form textarea {
   margin-bottom: 24px;
 }
 
-.resource-form input,
-.resource-form textarea {
+.form input,
+.form textarea {
   font-family: 'Inter';
   font-size: 16px;
   padding: 12px 16px;
@@ -332,12 +321,12 @@ textarea:focus {
   }
 }
 
-.resource-form textarea {
+.form textarea {
   resize: vertical;
   height: 100px;
 }
 
-.resource-form__label {
+.form__label {
   margin-bottom: 16px;
 }
 
@@ -385,16 +374,16 @@ textarea:focus {
   background-color: var(--color-form-button-hover);
 }
 
-/*-------------
-   Footer
---------------*/
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 33px 32px 0 32px;
   margin-bottom: 40px;
   border-top: 1px solid var(--color-footer-border-color);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer p {
@@ -421,20 +410,17 @@ textarea:focus {
   filter: grayscale(0%);
 }
 
-/*-----------------
-  MEDIA QUERIES
--------------------*/
 @media (max-width: 768px) {
   body {
     padding: 5px;
   }
 
-  .shopify__title {
+  header h1 {
     font-size: 14px;
     margin: 20px;
   }
 
-  .shopify__subtitle {
+  header h2 {
     font-size: 30px;
     margin-bottom: 40px;
     padding-inline: 10px;
@@ -445,7 +431,7 @@ textarea:focus {
     margin-bottom: 86px;
   }
 
-  .resources-container__table-wrapper {
+  .resources-container__table {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     width: 100%;
@@ -473,29 +459,29 @@ textarea:focus {
     white-space: wrap;
   }
 
-  .resource-table__pagination {
+  .pagination {
     max-width: 100%;
     padding: 10px;
     gap: 8px;
     flex-direction: row;
   }
 
-  .resource-table__pagination-button,
-  .resource-table__page-number {
+  .pagination-button,
+  .pagination__btns button {
     padding: 6px 10px;
     font-size: 12px;
   }
 
-  .resource-table__pagination-button span {
+  .pagination-button span {
     display: none;
   }
 
-  .form-section {
+  .form {
     padding: 20px;
     margin: 0 auto 58px auto;
   }
 
-  .form-section h2 {
+  .form h2 {
     font-size: 32px;
     letter-spacing: -1px;
   }
@@ -526,17 +512,17 @@ textarea:focus {
     padding: 8px;
   }
 
-  .resource-table__pagination-button,
+  .pagination-button,
   .resource-table__page-number {
     padding: 4px 8px;
     font-size: 10px;
   }
 
-  .resource-table__pagination-button svg {
+  .pagination-button svg {
     width: 20px;
   }
 
-  .resource-table__pagination-button span {
+  .pagination-button span {
     display: none;
   }
 

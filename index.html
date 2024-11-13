@@ -8,14 +8,16 @@
   <title>Awesome Shopify</title>
 </head>
 <body>
-  <div class="shopify">
-    <header class="shopify__header">
-      <h1 class="shopify__title">Awesome Shopify</h1>
-      <h2 class="shopify__subtitle">The world’s destination for Shopify resources.</h2>
-    </header>
+  <header>
+    <div class="container">
+      <h1>Awesome Shopify</h1>
+      <h2>The world’s destination for Shopify resources.</h2>
+    </div>
+  </header>
 
+  <main>
     <section class="resources-container">
-      <div class="resources-container__table-wrapper">
+      <div class="resources-container__table">
         <table class="resource-table">
           <thead class="resource-table__header">
             <tr class="resource-table__row-top">
@@ -39,7 +41,7 @@
                 </a>
               </td>
             </tr>
-
+  
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">Shopify Academy</td>
               <td>Blog</td>
@@ -54,7 +56,7 @@
                 </a>
               </td>
             </tr>
-
+  
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">Liquid Cheat Sheet</td>
               <td>Code Snippets</td>
@@ -68,7 +70,7 @@
                 </a>
               </td>
             </tr>
-
+  
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">Liquid Code Examples</td>
               <td>Code Snippets</td>
@@ -82,7 +84,7 @@
                 </a>
               </td>
             </tr>
-
+  
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">Polaris Components</td>
               <td>UI Components</td>
@@ -96,7 +98,7 @@
                 </a>
               </td>
             </tr>
-
+  
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">SuperHi – Shopify Theme Development</td>
               <td>Course</td>
@@ -113,49 +115,52 @@
           </tbody>
         </table>
       </div>
-
-      <div class="resource-table__pagination">
-        <button class="resource-table__pagination-button resource-table__pagination-button--prev">
+  
+      <div class="pagination">
+        <button class="pagination-button pagination-button--prev">
           <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.8333 7.5H1.16667M1.16667 7.5L7 13.3333M1.16667 7.5L7 1.66667" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <span>Previous</span>
+          Previous
         </button>
-        <div class="resource-table__page-numbers">
-          <span class="resource-table__page-number resource-table__page-number--current">1</span>
-          <span class="resource-table__page-number">2</span>
-          <span class="resource-table__page-number">3</span>
-          <span class="resource-table__page-number">...</span>
-          <span class="resource-table__page-number">9</span>
-          <span class="resource-table__page-number">10</span>
+    
+        <div class="pagination__btns">
+          <button class="current">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>...</button>
+          <button>9</button>
+          <button>10</button>
         </div>
-        <button class="resource-table__pagination-button resource-table__pagination-button--next">
-          <span>Next</span>
-            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.16663 7.5H12.8333M12.8333 7.5L6.99996 1.66667M12.8333 7.5L6.99996 13.3333" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+
+        <button class="pagination-button pagination-button--next">
+          Next
+          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.16663 7.5H12.8333M12.8333 7.5L6.99996 1.66667M12.8333 7.5L6.99996 13.3333" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </button>
       </div>
     </section>
 
-    <section class="form-section">
+    <section class="form">
       <h2>Help us grow the Awesome Shopify resource hub!</h2>
       <p>You can reach us anytime via <a href="mailto:hi@shopcrew.com">hi@shopcrew.com</a></p>
-
-      <form class="resource-form">
-        <label class="resource-form__label" for="name">Name <span>*</span></label>
+  
+      <form>
+        <label for="name">Name <span>*</span></label>
         <input type="text" id="name" name="name" placeholder="Your name" required>
-
-        <label class="resource-form__label" for="email">Email <span>*</span></label>
+  
+        <label for="email">Email <span>*</span></label>
         <input type="email" id="email" name="email" placeholder="you@company.com" required>
-
-        <label class="resource-form__label" for="resource-url">Resource URL <span>*</span></label>
+  
+        <label for="resource-url">Resource URL <span>*</span></label>
         <input type="url" id="resource-url" name="resource-url" placeholder="+1 (555) 000-0000" required>
-
-        <label class="resource-form__label" for="resource-description">Resource Description <span>*</span></label>
+  
+        <label for="resource-description">Resource Description <span>*</span></label>
         <textarea id="resource-description" name="resource-description" placeholder="Tell us a little about the project..." required></textarea>
+  
+        <label>Resource Category <span>*</span></label>
 
-        <label class="resource-form__label">Resource Category <span>*</span></label>
         <div class="checkbox-group">
           <label class="checkbox__group-label"><input type="checkbox" name="category" value="course"> Course</label>
           <label class="checkbox__group-label"><input type="checkbox" name="category" value="blog"> Blog</label>
@@ -164,12 +169,15 @@
           <label class="checkbox__group-label"><input type="checkbox" name="category" value="ui-components"> UI Components</label>
           <label class="checkbox__group-label"><input type="checkbox" name="category" value="other"> Other</label>
         </div>
+      
         <button type="submit">Get started</button>
       </form>
-
+  
     </section>
+  </main>
 
-    <footer class="footer">
+  <footer class="footer">
+    <div class="container">
       <p>&copy; 2024 · Awesome Shopify · All Rights Reserved</p>
       <div class="footer-icons">
         <a href="#"><img src="./assets/icons/icon-x.svg" alt="Twitter Icon"></a>
@@ -177,8 +185,7 @@
         <a href="#"><img src="./assets/icons/icon-facebook.svg" alt="Facebook Icon"></a>
         <a href="#"><img src="./assets/icons/icon-github.svg" alt="GitHub"></a>
       </div>
-    </footer>
-
-  </div>
+    </div>
+  </footer>
 </body>
 </html>
