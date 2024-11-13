@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/icons/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
   <title>Awesome Shopify</title>
 </head>
 <body>
@@ -21,10 +21,10 @@
         <table class="resource-table">
           <thead class="resource-table__header">
             <tr class="resource-table__row-top">
-              <th class="resource-table__heading">Resource Name</th>
-              <th class="resource-table__heading">Category</th>
-              <th class="resource-table__heading">Description</th>
-              <th class="resource-table__heading">Status</th>
+              <th>Resource Name</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody class="resource-table__body">
@@ -41,7 +41,7 @@
                 </a>
               </td>
             </tr>
-  
+
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">Shopify Academy</td>
               <td>Blog</td>
@@ -56,7 +56,7 @@
                 </a>
               </td>
             </tr>
-  
+
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">Liquid Cheat Sheet</td>
               <td>Code Snippets</td>
@@ -70,7 +70,7 @@
                 </a>
               </td>
             </tr>
-  
+
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">Liquid Code Examples</td>
               <td>Code Snippets</td>
@@ -84,7 +84,7 @@
                 </a>
               </td>
             </tr>
-  
+
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">Polaris Components</td>
               <td>UI Components</td>
@@ -98,7 +98,7 @@
                 </a>
               </td>
             </tr>
-  
+
             <tr class="resource-table__row">
               <td class="resource-table__cell-name">SuperHi – Shopify Theme Development</td>
               <td>Course</td>
@@ -115,26 +115,31 @@
           </tbody>
         </table>
       </div>
-  
+
       <div class="pagination">
         <button class="pagination-button pagination-button--prev">
           <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.8333 7.5H1.16667M1.16667 7.5L7 13.3333M1.16667 7.5L7 1.66667" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          Previous
+          <span>
+            Previous
+          </span>
         </button>
-    
+
         <div class="pagination__btns">
           <button class="current">1</button>
           <button>2</button>
           <button>3</button>
           <button>...</button>
+          <button>8</button>
           <button>9</button>
           <button>10</button>
         </div>
 
         <button class="pagination-button pagination-button--next">
-          Next
+          <span>
+            Next
+          </span>
           <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.16663 7.5H12.8333M12.8333 7.5L6.99996 1.66667M12.8333 7.5L6.99996 13.3333" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -145,20 +150,20 @@
     <section class="form">
       <h2>Help us grow the Awesome Shopify resource hub!</h2>
       <p>You can reach us anytime via <a href="mailto:hi@shopcrew.com">hi@shopcrew.com</a></p>
-  
+
       <form>
         <label for="name">Name <span>*</span></label>
         <input type="text" id="name" name="name" placeholder="Your name" required>
-  
+
         <label for="email">Email <span>*</span></label>
         <input type="email" id="email" name="email" placeholder="you@company.com" required>
-  
+
         <label for="resource-url">Resource URL <span>*</span></label>
         <input type="url" id="resource-url" name="resource-url" placeholder="+1 (555) 000-0000" required>
-  
+
         <label for="resource-description">Resource Description <span>*</span></label>
         <textarea id="resource-description" name="resource-description" placeholder="Tell us a little about the project..." required></textarea>
-  
+
         <label>Resource Category <span>*</span></label>
 
         <div class="checkbox-group">
@@ -169,10 +174,10 @@
           <label class="checkbox__group-label"><input type="checkbox" name="category" value="ui-components"> UI Components</label>
           <label class="checkbox__group-label"><input type="checkbox" name="category" value="other"> Other</label>
         </div>
-      
+
         <button type="submit">Get started</button>
       </form>
-  
+
     </section>
   </main>
 

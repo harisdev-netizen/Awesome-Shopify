@@ -75,7 +75,7 @@ header h2 {
   table-layout: auto;
 }
 
-.resource-table__heading {
+.resource-table__row-top th {
   font-family: 'Inter';
   font-size: 12px;
   font-weight: bold;
@@ -196,6 +196,7 @@ td {
   padding: 10px 16px;
   border-radius: 8px;
   cursor: pointer;
+  background: transparent;
   color: var(--color-pagination-current-bg-text);
   transition: background-color 0.2s;
   border: none;
@@ -326,7 +327,7 @@ textarea:focus {
   height: 100px;
 }
 
-.form__label {
+.form form label {
   margin-bottom: 16px;
 }
 
@@ -357,7 +358,7 @@ textarea:focus {
   margin: 0;
 }
 
-.resource-form button {
+.form form button {
   font-family: 'Inter';
   font-size: 16px;
   font-weight: 600;
@@ -370,7 +371,7 @@ textarea:focus {
   cursor: pointer;
 }
 
-.resource-form button:hover {
+.form form button:hover {
   background-color: var(--color-form-button-hover);
 }
 
@@ -444,7 +445,7 @@ textarea:focus {
     table-layout: fixed;
   }
 
-  .resource-table__heading,
+  .resource-table__row-top th,
   .resource-table__row td {
     font-size: 12px;
     padding: 10px 8px;
@@ -486,7 +487,7 @@ textarea:focus {
     letter-spacing: -1px;
   }
 
-  .footer {
+  .footer .container {
     flex-direction: column;
     text-align: center;
   }
@@ -506,7 +507,7 @@ textarea:focus {
     font-size: 24px;
   }
 
-  .resource-table__heading,
+  .resource-table__row-top th,
   .resource-table__row td {
     font-size: 10px;
     padding: 8px;
