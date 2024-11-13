@@ -445,6 +445,7 @@ textarea:focus {
   .shopify__subtitle {
     font-size: 30px;
     margin-bottom: 40px;
+    padding-inline: 10px;
   }
 
   .resources-container {
