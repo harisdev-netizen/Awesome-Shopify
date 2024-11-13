@@ -124,33 +124,6 @@ td {
   text-overflow: clip;
 }
 
-/* .resource-table__cell a {
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-resource-table-preview);
-  position: relative;
-  transition: color 0.5s ease;
-}
-
-.resource-table__cell a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--color-resource-table-preview);
-  transition: width 0.5s ease;
-}
-
-.resource-table__cell a:hover::after {
-  width: 100%;
-}
-
-.resource-table__cell-name {
-  color: var(--color-resource-names);
-} */
-
 .resource-table__cell svg {
   width: 20px;
 }
@@ -429,7 +402,6 @@ textarea:focus {
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-footer-text);
-  /* margin-bottom: 10px; */
 }
 
 .footer-icons {
