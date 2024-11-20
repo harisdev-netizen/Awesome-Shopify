@@ -102,12 +102,12 @@ header h2 {
   color: var(--color-table-text);
 }
 
-td:nth-child(2) {
+.resource-table__cell-category {
   min-width: 200px;
   white-space: nowrap;
 }
 
-td:nth-child(1) {
+.resource-table__cell-name {
   min-width: 250px;
   white-space: nowrap;
 }
@@ -162,8 +162,7 @@ td {
   font-weight: 600;
   line-height: 1.4;
   color: var(--color-free-status-text);
-  transition: 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, stroke 0.3s ease-in-out;
   box-shadow: 0px 1px 2px 0px #1018280D;
 }
 
@@ -175,6 +174,7 @@ td {
 .pagination-button svg {
   width: 12px;
 }
+
 
 .pagination-button:hover svg path {
   stroke: var(--color-main);
@@ -454,11 +454,11 @@ textarea:focus {
     text-align: left;
   }
 
-  td:nth-child(2) {
+  .resource-table__cell-category {
     white-space: wrap;
   }
 
-  td:nth-child(1) {
+  .resource-table__cell-name {
     white-space: wrap;
   }
 
